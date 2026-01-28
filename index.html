@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Foodie - Order delicious food from your favorite restaurants. Fast delivery, great offers, and a wide variety of cuisines.">
+    <title>Foodie - Food Delivery App | Order Food Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand" id="homeLink">
+                <span class="navbar-logo">Foodie<span>.</span></span>
+            </a>
+
+            <ul class="navbar-nav" id="navLinks">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="restaurants">Restaurants</a></li>
+                <li><a href="#cuisines" class="nav-link">Cuisines</a></li>
+                <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <button class="cart-btn" id="cartBtn">
+                    🛒
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         LANDING PAGE
+    ======================================== -->
+    <main id="landingPage">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline>
+                    <source src="https://cdn.pixabay.com/video/2020/07/30/45739-446020673_large.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge">Fastest Delivery in Town</span>
+                    <h1 class="hero-title">
+                        Delicious Food,<br>
+                        Delivered to Your <span>Doorstep</span>
+                    </h1>
+                    <p class="hero-description">
+                        Discover the best restaurants near you. Order your favorite meals from hundreds of restaurants
+                        with just a few clicks. Fast delivery, amazing offers!
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary" id="orderNowBtn">
+                            🍔 Order Now
+                        </button>
+                        <button class="btn btn-secondary">
+                            📱 Download App
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">500+</div>
+                            <div class="stat-label">Restaurants</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">10K+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">30 min</div>
+                            <div class="stat-label">Avg Delivery</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-floating">
+                    <div class="floating-item">🍕</div>
+                    <div class="floating-item">🍔</div>
+                    <div class="floating-item">🍜</div>
+                    <div class="floating-item">🥗</div>
+                    <div class="floating-item">🍣</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section how-it-works" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Order your favorite food in just 3 simple steps</p>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <span class="step-number">01</span>
+                        <div class="step-icon">📍</div>
+                        <h3 class="step-title">Choose Location</h3>
+                        <p class="step-description">Enter your delivery address or enable location to find restaurants
+                            near you</p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">02</span>
+                        <div class="step-icon">🍽️</div>
+                        <h3 class="step-title">Select Restaurant</h3>
+                        <p class="step-description">Browse through hundreds of restaurants and pick your favorite dishes
+                        </p>
+                    </div>
+                    <div class="step-card">
+                        <span class="step-number">03</span>
+                        <div class="step-icon">🚀</div>
+                        <h3 class="step-title">Fast Delivery</h3>
+                        <p class="step-description">Sit back and relax! Your food will be delivered hot and fresh to
+                            your door</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuisine Categories Section -->
+        <section class="section" id="cuisines">
+            <div class="container">
+                <h2 class="section-title">Explore Cuisines</h2>
+                <p class="section-subtitle">What are you craving today?</p>
+
+                <div class="cuisines-grid" id="cuisinesGrid">
+                    <!-- Cuisines will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Restaurants Section -->
+        <section class="section" id="featured">
+            <div class="container">
+                <h2 class="section-title">Featured Restaurants</h2>
+                <p class="section-subtitle">Popular places loved by food enthusiasts</p>
+
+                <div class="restaurants-preview-grid" id="featuredGrid">
+                    <!-- Featured restaurants will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Order?</h2>
+                    <p class="cta-description">
+                        Explore hundreds of restaurants and cuisines. Get exclusive offers and discounts on your first
+                        order!
+                    </p>
+                    <button class="btn cta-button" id="ctaOrderBtn">
+                        🎉 Start Ordering
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="footer-logo">Foodie.</div>
+                        <p class="footer-description">
+                            Your favorite food, delivered fast. We partner with the best restaurants to bring delicious
+                            meals to your doorstep.
+                        </p>
+                        <div class="footer-social">
+                            <a href="#" class="social-link">📘</a>
+                            <a href="#" class="social-link">🐦</a>
+                            <a href="#" class="social-link">📷</a>
+                            <a href="#" class="social-link">▶️</a>
+                        </div>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Partner with us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="footer-copyright">© 2026 Foodie. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="#">Terms</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- ========================================
+         RESTAURANTS LISTING PAGE
+    ======================================== -->
+    <main id="restaurantsPage" class="hidden">
+        <header class="page-header">
+            <div class="container">
+                <button class="back-btn" id="backToHome">
+                    ← Back to Home
+                </button>
+                <h1 class="page-title">All Restaurants</h1>
+                <p class="page-subtitle">Discover 500+ restaurants near you</p>
+            </div>
+        </header>
+
+        <section class="restaurants-section">
+            <div class="container">
+                <div class="restaurants-layout">
+                    <!-- Filter Sidebar -->
+                    <aside class="filter-sidebar">
+                        <div class="filter-card">
+                            <h3 class="filter-title">🔍 Filters</h3>
+
+                            <div class="filter-group">
+                                <h4 class="filter-group-title">Cuisine Type</h4>
+                                <div class="filter-options" id="cuisineFilters">
+                                    <!-- Filters will be loaded by JavaScript -->
+                                </div>
+                            </div>
+
+                            <div class="filter-group">
+                                <h4 class="filter-group-title">Rating</h4>
+                                <div class="filter-options" id="ratingFilters">
+                                    <label class="filter-option" data-rating="4">
+                                        <span class="filter-checkbox"></span>
+                                        <span>4.0+ ⭐</span>
+                                    </label>
+                                    <label class="filter-option" data-rating="3.5">
+                                        <span class="filter-checkbox"></span>
+                                        <span>3.5+ ⭐</span>
+                                    </label>
+                                    <label class="filter-option" data-rating="3">
+                                        <span class="filter-checkbox"></span>
+                                        <span>3.0+ ⭐</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Restaurant Grid -->
+                    <div class="restaurants-content">
+                        <div class="search-bar">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="searchInput" placeholder="Search for restaurants or cuisines...">
+                        </div>
+
+                        <div class="restaurants-grid" id="restaurantsGrid">
+                            <!-- Restaurants will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================
+         RESTAURANT DETAIL PAGE
+    ======================================== -->
+    <main id="restaurantDetailPage" class="hidden">
+        <section class="restaurant-detail">
+            <div class="restaurant-banner" id="restaurantBanner">
+                <img src="" alt="Restaurant Banner" id="restaurantBannerImg">
+                <div class="restaurant-banner-overlay"></div>
+                <div class="restaurant-banner-content">
+                    <div class="container">
+                        <button class="back-btn" id="backToRestaurants">
+                            ← Back to Restaurants
+                        </button>
+                        <div class="restaurant-detail-info">
+                            <div class="restaurant-detail-header">
+                                <h1 id="restaurantDetailName">Restaurant Name</h1>
+                                <div class="restaurant-detail-meta">
+                                    <span id="restaurantDetailCuisine">Cuisine</span>
+                                    <span>📍 <span id="restaurantDetailLocation">Location</span></span>
+                                    <span>⏱️ <span id="restaurantDetailTime">30-40 min</span></span>
+                                </div>
+                            </div>
+                            <div class="restaurant-detail-rating" id="restaurantDetailRating">
+                                ⭐ 4.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="menu-section">
+                <div class="container">
+                    <div class="menu-layout">
+                        <!-- Menu Categories -->
+                        <aside class="menu-categories">
+                            <nav class="category-nav" id="categoryNav">
+                                <!-- Categories will be loaded by JavaScript -->
+                            </nav>
+                        </aside>
+
+                        <!-- Menu Items -->
+                        <div class="menu-content" id="menuContent">
+                            <!-- Menu items will be loaded by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- ========================================
+         CART SIDEBAR
+    ======================================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2 class="cart-title">Your Cart</h2>
+            <button class="cart-close" id="cartClose">✕</button>
+        </div>
+
+        <div class="cart-restaurant" id="cartRestaurant" style="display: none;">
+            <div class="cart-restaurant-logo">🏪</div>
+            <span class="cart-restaurant-name" id="cartRestaurantName">Restaurant Name</span>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="cart-empty-icon">🛒</div>
+                <h3>Your cart is empty</h3>
+                <p>Add items from a restaurant to get started</p>
+            </div>
+        </div>
+
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-summary">
+                <div class="cart-summary-row">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal">₹0</span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>Delivery Fee</span>
+                    <span id="cartDeliveryFee">₹40</span>
+                </div>
+                <div class="cart-summary-row">
+                    <span>GST (5%)</span>
+                    <span id="cartTax">₹0</span>
+                </div>
+                <div class="cart-summary-row total">
+                    <span>Total</span>
+                    <span id="cartTotal">₹0</span>
+                </div>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+        </div>
+    </aside>
+
+    <!-- ========================================
+         CHECKOUT SUCCESS MODAL
+    ======================================== -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-modal-overlay" id="checkoutModalOverlay"></div>
+        <div class="checkout-modal-content">
+            <div class="checkout-modal-header">
+                <div class="checkout-success-icon">✓</div>
+                <h2>Order Placed Successfully!</h2>
+                <p>Your delicious food is on its way</p>
+            </div>
+
+            <div class="order-details">
+                <h3>Order Summary</h3>
+                <div class="order-items" id="orderItems">
+                    <!-- Order items will be loaded by JavaScript -->
+                </div>
+                <div class="order-total">
+                    <span>Total Paid</span>
+                    <span id="orderTotal">₹0</span>
+                </div>
+            </div>
+
+            <div class="checkout-modal-actions">
+                <button class="track-order-btn" id="trackOrderBtn">
+                    🚚 Track Your Order
+                </button>
+                <button class="continue-btn" id="continueBtn">
+                    Continue Ordering
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
