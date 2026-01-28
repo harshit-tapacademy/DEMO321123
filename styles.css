@@ -14,7 +14,7 @@
     --primary: #FF5722;
     --primary-dark: #E64A19;
     --primary-light: #FF8A65;
-    --primary-gradient: linear-gradient(135deg, #FF5722 0%, #FF9800 100%);
+    --primary-gradient: linear-gradient(135deg, #00ddff 0%, #7300ff 100%);
 
     /* Secondary Colors */
     --secondary: #1A1A2E;
